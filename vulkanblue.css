@@ -7,7 +7,7 @@ div.lin{
 a.qs{
  color: white;
  background-color:  black;
-padding: 10px;
+padding: 0%;
 
 display: inline-block;
 margin: 50px;
@@ -15,16 +15,16 @@ margin: 50px;
 a.dds{
  color: white;
  background-color: black;
- padding: 10px;
+ padding: 0%;
 
 display: inline-block;
-margin: 50px;  
+margin: 0%;  
 }
 a.hp{
  
  color: white;
  background-color:black;
- padding: 10px;
+ padding: 0%;
 
 display: inline-block;
 margin: 50px; 
@@ -32,7 +32,7 @@ margin: 50px;
 a.QOT{
   color: white;
   background-color:black;
-  padding: 10px;
+  padding: 0%;
  
  display: inline-block;
  margin: 50px; 
@@ -80,7 +80,7 @@ img {
  }
 
 
- 
+
 body.pol{
   text-align: center;
 }
