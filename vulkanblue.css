@@ -29,6 +29,15 @@ a.hp{
 display: inline-block;
 margin: 50px; 
 }
+a.QOT{
+  color: white;
+  background-color:black;
+  padding: 10px;
+ 
+ display: inline-block;
+ margin: 50px; 
+
+}
 h2{
 text-align: center;
 }
@@ -62,4 +71,16 @@ img {
     max-width: 100%;
     height: auto;
   }
-  
+ body{
+ background-image: url('/img/fondo-web.png');
+  background-size: cover;  
+   background-repeat: no-repeat; 
+    background-position: center;
+ 
+ }
+
+
+ 
+body.pol{
+  text-align: center;
+}
