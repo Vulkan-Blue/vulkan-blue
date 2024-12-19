@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardar Etiquetas p con LocalStorage</title>
+</head>
+<body>
+    <h1>Guardar Contenido del Textarea en Párrafos con LocalStorage</h1>
+    <textarea id="miTextarea" rows="4" cols="50"></textarea>
+    <br>
+    <button onclick="crearParrafo()">Crear Párrafo</button>
+    <div id="contenedor"></div>
+
+    <script >
+// Función para cargar los párrafos guardados en localStorage al iniciar
+window.onload = function() {
+    var savedParagraphs = JSON.parse(localStorage.getItem('paragraphs')) || [];
+    var contenedor = document.getElementById('contenedor');
+    savedParagraphs.forEach(function(text) {
+        var nuevoParrafo = document.createElement('p');
+        nuevoParrafo.textContent = text;
+        contenedor.appendChild(nuevoParrafo);
+    });
+}
+
+// Función para crear un nuevo párrafo y guardarlo en localStorage
+function crearParrafo() {
+    // Obtener el valor del textarea
+    var texto = document.getElementById('miTextarea').value;
+    
+    // Crear un nuevo elemento <p>
+    var nuevoParrafo = document.createElement('p');
+    
+    // Asignar el texto al nuevo párrafo
+    nuevoParrafo.textContent = texto;
+    
+    // Añadir el nuevo párrafo al contenedor en el DOM
+    var contenedor = document.getElementById('contenedor');
+    contenedor.appendChild(nuevoParrafo);
+    
+    // Guardar el nuevo párrafo en localStorage
+    var savedParagraphs = JSON.parse(localStorage.getItem('paragraphs')) || [];
+    savedParagraphs.push(texto);
+    localStorage.setItem('paragraphs', JSON.stringify(savedParagraphs));
+}
+window.onload = function() {
+    var savedParagraphs = JSON.parse(localStorage.getItem('paragraphs')) || [];
+    var contenedor = document.getElementById('contenedor');
+    savedParagraphs.forEach(function(text) {
+        var nuevoParrafo = document.createElement('p');
+        nuevoParrafo.textContent = text;
+        contenedor.appendChild(nuevoParrafo);
+    });
+}
+
+
+
+    </script>
+</body>
+</html>
