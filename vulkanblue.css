@@ -38,6 +38,15 @@ a.QOT{
  margin: 50px; 
 
 }
+a.objetivo{
+
+  color: white;
+  background-color:black;
+  padding: 0%;
+ 
+ display: inline-block;
+ margin: 50px;  
+}
 h2{
 text-align: center;
 }
