@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplicación de Mensajería</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Ejemplo con PouchDB</title>
+    <link rel="stylesheet" href="chat.css">
 </head>
 <body>
-    
-    <h1>Formulario de Texto</h1> 
-    <textarea id="miTextarea" rows="4" cols="50">
+    <h2>enviar mensaje</h2>
+    <textarea id="miTextarea" rows="1" cols="50"></textarea><br>
+    <button onclick="crearParrafo()">enviar</button>
 
-    </textarea> <br> <button onclick="mostrarAlerta()">Iniciar sección</button>
-     
-    <script src="scripts.js"></script>
+    <div id="contenedor"></div>
+
+    <!-- Incluir PouchDB desde un CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/pouchdb@7.3.1/dist/pouchdb.min.js"></script>
+    <script src="scripts.js"> </script>
 </body>
 </html>

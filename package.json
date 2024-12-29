@@ -1,0 +1,15 @@
+{
+  "name": "vulkan-blue",
+  "version": "1.0.0",
+  "main": "ia.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "anime": "^0.1.2",
+    "pouchdb": "^9.0.0"
+  },
+  "description": ""
+}
