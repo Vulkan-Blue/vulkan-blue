@@ -1,0 +1,8 @@
+
+CREATE TABLE usu (
+ id int(11) PRIMARY KEY AUTO_INCREMENT,
+ nombre varchar(150) NOT NULL,
+ eddad TINYINT NOT NULL
+
+
+);

@@ -64,7 +64,20 @@ contenedor.appendChild(nuevoParrafo);
        }
 
 
-       if(texto.includes("como est")|| texto.includes("todo bie")|| texto.includes("como and")|| texto.includes("como te va")|| texto.includes("como te fue")|| texto.includes("como va")){
+
+
+
+
+
+
+
+
+
+       if(texto.includes("que")                                                                                                 || texto.includes("todo bie")|| texto.includes("como and")|| texto.includes("como te va")|| texto.includes("como te fue")|| texto.includes("como va")){
+           if(texto.includes("onda")){
+        
+     
+     
         var nuevoParrafo = document.createElement("p");
     nuevoParrafo.innerHTML = sumando_2;
 
@@ -72,21 +85,46 @@ contenedor.appendChild(nuevoParrafo);
 contenedor.appendChild(nuevoParrafo); 
 
         parrafo.textContent = "Hola, hoy me ha sido un dia exelente, como esta tu día?" }
+    
 
 
-
-/*
-    else {
-        var nuevoParrafo = document.createElement("p");
+        
+    
+        if(texto.includes("llego")){
+        
+            if(texto.includes("llego")){
+                if(texto.includes("llego")){
+     
+            var nuevoParrafo = document.createElement("p");
         nuevoParrafo.innerHTML = sumando_2;
     
         var contenedor = document.getElementById("contenedor"); 
     contenedor.appendChild(nuevoParrafo); 
     
-            parrafo.textContent = "creo que no te entiendo";
-           
+            parrafo.textContent = "Asi mira" }
+                }}
+                
+    
+    
+    
+    
+    
+    }
 
-    }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     var contenedor = document.getElementById("contenedor"); 
 contenedor.appendChild(parrafo); 
 
