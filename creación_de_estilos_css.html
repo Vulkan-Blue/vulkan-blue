@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear botones y áreas de texto dinámicamente</title>
+    <style>
+        .boton-posicionable {
+            position: absolute;
+          
+        }
+        .text-altura{
+            position: absolute;
+            left: 500px;
+            top: 0px;
+        }
+        .text-lateral{
+            position: absolute;
+            left: 500px;
+            top: 40px
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Crear botones y áreas de texto</h1>
+    <input type="file" id="archivo" accept=".html">
+    <div id="contenido"></div>
+    <button id="botonCrear">Crear Botón</button>
+
+    <script>
+        document.getElementById('archivo').addEventListener('change', function() {
+            const archivo = this.files[0];
+            if (archivo) {
+                const lector = new FileReader();
+                lector.onload = function(e) {
+                    document.getElementById('contenido').innerHTML = e.target.result;
+                };
+                lector.readAsText(archivo);
+            }
+        });
+
+        document.getElementById('botonCrear').addEventListener('click', function() {
+            var nuevoBoton = document.createElement('button');
+            nuevoBoton.className = 'boton-posicionable';
+            nuevoBoton.textContent = 'Nuevo Botón';
+            
+            nuevoBoton.onclick = function() {
+                //altura
+                var TextareaAltura = document.createElement('textarea');
+                TextareaAltura.className = 'text-altura';
+                TextareaAltura.id = "identificadorDeTextAreaAltura" ;
+                TextareaAltura.placeholder = 'Y';
+                document.getElementById('contenido').appendChild(TextareaAltura);
+            //lateral
+            var TextareaLateral = document.createElement('textarea');
+            TextareaLateral.className = 'text-lateral';
+                TextareaLateral.id = "identificadorDeTextAreaLateral" ;
+                TextareaLateral.placeholder = 'X';
+                document.getElementById('contenido').appendChild(TextareaLateral);
+                
+            var aceptar = document.createElement('button');
+            aceptar.id = 'aceparci';
+            
+            aceptar.textContent = 'aceptar';
+
+            aceptar.onclick = function(){
+                //Corregir altura
+                var idtextAltura = document.getElementById('identificadorDeTextAreaAltura').value;
+                var funA = document.createElement('p');
+                funA.textContent = "Y" + idtextAltura;
+                document.getElementById('contenido').appendChild(funA);
+
+            //laterales
+            var idtexLateral = document.getElementById('identificadorDeTextAreaLateral').value;
+                var funL = document.createElement('p');
+                funL.textContent = "X" + idtexLateral;
+                document.getElementById('contenido').appendChild(funL);
+                //posicion del botón
+                nuevoBoton.style.top = idtextAltura + 'px' ; // Posición aleatoria en el eje Y
+            nuevoBoton.style.left = idtexLateral  + 'px'; // Posición aleatoria en el eje X
+            TextareaAltura.style.top = idtextAltura + 50 + 'px' ; // Posición aleatoria en el eje Y
+            TextareaAltura.style.left = idtexLateral + 100 + 'px'; // Posición aleatoria en el eje X
+            TextareaLateral.style.top = idtextAltura + 'px' ; // Posición aleatoria en el eje Y
+            TextareaLateral.style.left = idtexLateral  + 'px'; // Posición aleatoria en el eje X
+           
+
+            }
+            document.getElementById('contenido').appendChild(aceptar);
+            
+                   
+
+
+
+
+
+            };
+            document.getElementById('contenido').appendChild(nuevoBoton);
+           
+
+        });
+
+        
+      
+
+
+    </script>
+</body>
+</html>
