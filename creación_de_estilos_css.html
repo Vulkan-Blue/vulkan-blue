@@ -19,6 +19,30 @@
             left: 500px;
             top: 40px
         }
+        .boton-aceptar{
+            position: absolute;
+            left: 700px;
+            top: 0px
+        }
+       .text-radio{
+            position: absolute;
+            left: 500px;
+            top: 80px
+        }
+        .text-bordes{
+            position: absolute;
+            left: 500px;
+            top: 120px
+        }
+        .text-tamaño{
+            position: absolute;
+            left: 500px;
+            top: 160px
+        }
+
+
+
+
 
 
     </style>
@@ -59,8 +83,35 @@
                 TextareaLateral.id = "identificadorDeTextAreaLateral" ;
                 TextareaLateral.placeholder = 'X';
                 document.getElementById('contenido').appendChild(TextareaLateral);
-                
+            //Radio
+            var Textarearadio = document.createElement('textarea');
+            Textarearadio.className = 'text-radio';
+            Textarearadio.id = "identificadorDeradio" ;
+            Textarearadio.placeholder = 'radio';
+                document.getElementById('contenido').appendChild(Textarearadio);
+            //tamaño de bordes
+            var TextareaBordes = document.createElement('textarea');
+            TextareaBordes.className = 'text-bordes';
+            TextareaBordes.id = "identificadorDebordes" ;
+            TextareaBordes.placeholder = 'Bordes';
+                document.getElementById('contenido').appendChild(TextareaBordes);
+                 
+                //tamaño del boton
+                var Textareatamaño = document.createElement('textarea');
+            Textareatamaño.className = 'text-tamaño';
+            Textareatamaño.id = "identificadorDetamaño" ;
+            Textareatamaño.placeholder = 'Tamaño del boton';
+                document.getElementById('contenido').appendChild(Textareatamaño);
+
+
+
+
+
+
+
+               //Boton aceptar 
             var aceptar = document.createElement('button');
+            aceptar.className = 'boton-aceptar';
             aceptar.id = 'aceparci';
             
             aceptar.textContent = 'aceptar';
@@ -80,11 +131,7 @@
                 //posicion del botón
                 nuevoBoton.style.top = idtextAltura + 'px' ; // Posición aleatoria en el eje Y
             nuevoBoton.style.left = idtexLateral  + 'px'; // Posición aleatoria en el eje X
-            TextareaAltura.style.top = idtextAltura + 50 + 'px' ; // Posición aleatoria en el eje Y
-            TextareaAltura.style.left = idtexLateral + 100 + 'px'; // Posición aleatoria en el eje X
-            TextareaLateral.style.top = idtextAltura + 'px' ; // Posición aleatoria en el eje Y
-            TextareaLateral.style.left = idtexLateral  + 'px'; // Posición aleatoria en el eje X
-           
+            
 
             }
             document.getElementById('contenido').appendChild(aceptar);
