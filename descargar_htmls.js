@@ -40,7 +40,7 @@ var blob = new Blob([contenido], { type: "text/plain" });
 // Crear un enlace de descarga
 var enlace = document.createElement("a");
 enlace.href = URL.createObjectURL(blob);
-enlace.download = "parrafos.txt";
+enlace.download = "parrafos.html";
 
 // Simular un clic en el enlace para iniciar la descarga
 enlace.click();
